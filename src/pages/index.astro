@@ -6,6 +6,7 @@ import Experience from "../components/experience";
 import Profile from "../components/profile";
 import Skills from "../components/skills";
 import Analytics from "@vercel/analytics/astro"
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 import "../styles/global.css";
 ---
 
@@ -115,6 +116,7 @@ import "../styles/global.css";
       }
     </script>
     <Analytics />
+    <SpeedInsights />
   </head>
   <body>
     <div class="relative h-screen transition-all">
