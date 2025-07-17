@@ -1,25 +1,25 @@
 "use client";
 
-import { Cake, MapPin, Send, Mail, FileDown, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
+import { Cake, ChevronDown, FileDown, Mail, MapPin } from "lucide-react";
 import ToggleMode from "./ui/toggle-mode";
 
 export default function ProfileCard() {
   const handleDownloadCV = (language: "es" | "en") => {
     const cvUrls = {
-      es: "/cv-elian-rehbani-es.pdf",
-      en: "/cv-elian-rehbani-en.pdf",
+      es: "/pdf/CV-Elian-Rehbani-2025.pdf",
+      en: "/pdf/CV-Elian-Rehbani-2025-(EN).pdf",
     };
 
     const link = document.createElement("a");
     link.href = cvUrls[language];
-    link.download = `CV-Elian-Rehbani-${language.toUpperCase()}.pdf`;
+    link.download = `CV-Elian-Rehbani-2025.pdf`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

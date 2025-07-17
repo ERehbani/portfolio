@@ -66,7 +66,7 @@ export default function Certifications() {
             <div className="text-center max-lg:text-sm">
               <Dialog>
                 <DialogTrigger asChild className="z-50">
-                  <button className="hover:underline hover:font-semibold transition-all focus:outline-none">
+                  <button className="hover:underline hover:font-semibold transition-all duration-75 focus:outline-none">
                     <h3 className="text-lg text-center h-14 flex items-center justify-center cursor-pointer px-2">
                       {currentCertificate.title}
                     </h3>

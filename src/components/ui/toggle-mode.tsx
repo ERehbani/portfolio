@@ -1,50 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useTheme } from '../../lib/useTheme';
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState('dark');
-
-  // Función para aplicar el tema
-  const applyTheme = (newTheme: string) => {
-    if (newTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    setTheme(newTheme);
-  };
-
-  // Obtener tema inicial (por defecto dark)
-  const getInitialTheme = () => {
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return localStorage.getItem('theme');
-    }
-    // Siempre retornar 'dark' como tema por defecto
-    return 'dark';
-  };
-
-  // Efecto para aplicar tema inicial inmediatamente
-  useEffect(() => {
-    const initialTheme = getInitialTheme();
-    applyTheme(initialTheme || 'dark');
-  }, []);
-
-  // Manejar click del botón
-  const handleToggle = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    applyTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-  };
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="bg-white dark:bg-gray-900 transition-colors duration-200">
       <button
-        onClick={handleToggle}
-        className="p-2 w-fit rounded-lg border border-[#3e3e3e] dark:bg-[#3e3e3e] text-[#3e3e3e] dark:text-gray-200 dark:hover:bg-[#1e1e1e] hover:bg-[#1e1e1e] hover:[&_svg]:text-white transition-colors duration-200 absolute top-2 right-2"
+        onClick={toggleTheme}
+        className="p-2 w-fit rounded-lg border border-[#3e3e3e] dark:bg-[#3e3e3e] text-[#3e3e3e] dark:text-gray-200 dark:hover:bg-[#1e1e1e] hover:bg-[#1e1e1e] hover:[&_svg]:text-white transition-colors duration-200 absolute md:top-1 md:right-1 top-2 right-2 xl:top-2 xl:right-2"
         aria-label="Toggle theme"
       >
         {/* Icono de luna (para modo oscuro) */}
         <svg 
-          className={`w-5 h-5 ${theme === 'dark' ? 'hidden' : 'block'}`} 
+          className={`md:w-3 xl:w-5 w-5 md:h-3 xl:h-5 h-5 ${theme === 'dark' ? 'hidden' : 'block'}`} 
           fill="currentColor" 
           viewBox="0 0 20 20"
         >
@@ -53,7 +22,7 @@ const ThemeToggle = () => {
         
         {/* Icono de sol (para modo claro) */}
         <svg 
-          className={`w-5 h-5 ${theme === 'light' ? 'hidden' : 'block'}`} 
+          className={`md:w-3 xl:w-5 w-5 md:h-3 xl:h-5 h-5 ${theme === 'light' ? 'hidden' : 'block'}`} 
           fill="currentColor" 
           viewBox="0 0 20 20"
         >
