@@ -70,7 +70,7 @@ export default function ProfileCard() {
             className="text-sm flex items-center gap-2 justify-center py-3 w-full lg:w-fit lg:px-3 rounded-md bg-[#3e3e3e] dark:bg-white text-black hover:[&_svg]:text-white dark:hover:[&_svg]:text-black hover:text-white transition-colors"
           >
             <Mail className="w-5 text-white dark:text-[#3e3e3e] transition-all" />
-            <span className="lg:hidden text-white">E-mail me</span>
+            <span className="lg:hidden text-white dark:text-[#3e3e3e]">E-mail me</span>
           </a>
           <span className="hidden lg:block text-sm text-[#3e3e3e] dark:text-white">elianrhbn@gmail.com</span>
         </div>
