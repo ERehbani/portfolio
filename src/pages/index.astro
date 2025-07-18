@@ -8,6 +8,13 @@ import Skills from "../components/skills";
 import Analytics from "@vercel/analytics/astro"
 import  SpeedInsights  from "@vercel/speed-insights/astro"
 import "../styles/global.css";
+
+// const redirectLang = Astro.request.headers.get('accept-language') || '';
+// const lang = redirectLang.toLowerCase().startsWith('es') ? 'es' : 'en';
+
+// Astro.redirect(`/${lang}`);
+
+
 ---
 
 <html lang="en">
@@ -34,13 +41,18 @@ import "../styles/global.css";
     </title>
     <link rel="canonical" href="https://www.elianrehbani.com/" />
 
+
+    <!-- <link rel="alternate" hreflang="en" href="/en" />
+    <link rel="alternate" hreflang="es" href="/es" /> -->
+
+
     <meta
       name="description"
       content="Portfolio de Elian Rehbani, Desarrollador Frontend con experiencia en React, Next.js, TypeScript y TailwindCSS."
     />
     <meta
       name="keywords"
-      content="Elian Rehbani, frontend, desarrollador frontend, ReactJS, Next.js, TypeScript, TailwindCSS, desarrollo web, sitios para negocios, diseño web, desarrollador fullstack junior, métricas web, portfolio de desarrollador"
+      content="Elian Rehbani, frontend, frontend developer freelance, freelancer, front end it, front-end, upwork, freelancing, freelance job, desarrollador frontend, ReactJS, Next.js, TypeScript, TailwindCSS, desarrollo web, sitios para negocios, diseño web, desarrollador fullstack junior, métricas web, portfolio de desarrollador"
     />
     <meta name="author" content="Elian Rehbani" />
 
@@ -169,7 +181,7 @@ import "../styles/global.css";
           <footer
             class="text-xl -mt-5 text-[#5b5b5b] flex items-center text-center w-ful justify-center gap-2 text"
           >
-            <h2>Made with</h2>
+            <h4>Made with</h4>
             <Image
               src="/svg/astrofooter.svg"
               alt="Astro"
@@ -177,7 +189,7 @@ import "../styles/global.css";
               height={100}
               class="w-10 h-10"
             />
-            <h2>Astro</h2>
+            <h4>Astro</h4>
           </footer>
         </div>
       </div>

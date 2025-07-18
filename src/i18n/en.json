@@ -1,0 +1,17 @@
+{
+    "footer": {
+        "title": "Made with",
+        "second_title": "Astro"
+    },
+    "profile": {
+        "openToWork": "Open to work",
+        "birthday": "25 NOV, 2003",
+        "sendEmail": "E-mail me",
+        "downloadCV": "Download CV"
+    },
+    "about": {
+        "title": "About me",
+        "description_1": " with experience in building scalable, custom, and product-oriented web solutions. I specialize in ",
+        "description_2": " and modern tools from the JavaScript ecosystem such as TypeScript, TailwindCSS, testing frameworks, and version control systems. I've worked on projects involving artificial intelligence, automated content generation, personalized diagnostic systems, and the customization of eCommerce platforms. I have experience developing everything from MVPs to complex features, always prioritizing user experience, accessibility, and performance."
+    }
+}
