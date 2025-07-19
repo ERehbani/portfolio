@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import ToggleLanguage from "./ui/toggle-language";
+import ToggleMode from "./ui/toggle-mode";
+
+const { content } = Astro.props;
+---
+
+<footer
+  class="text-base text-[#5b5b5b] flex items-center justify-between w-full gap-1 -mt-10"
+>
+  <div class="flex w-full">
+    <h4>{content.title}</h4>
+    <Image
+      src="/svg/astrofooter.svg"
+      alt="Astro"
+      width={100}
+      height={100}
+      class="w-6 h-6"
+    />
+    <h4>{content.second_title}</h4>
+  </div>
+
+  <div class="flex justify-end w-full py-2 gap-2">
+    <ToggleLanguage client:idle />
+    <ToggleMode client:idle />
+  </div>
+</footer>
+

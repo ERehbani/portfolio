@@ -1,10 +1,14 @@
-import type Experience from "../experience";
+import type { Job } from "@/lib/types";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
 
-const jobSpace = ({ experience }: { experience: Experience[] }) => {
+
+
+
+
+const jobSpace = ({ experience }: { experience: Job[] }) => {
   return (
     <div className="space-y-4 pr-4">
-      {experience.map((exp: Experience, index: number) => (
+      {experience.map((exp: Job, index: number) => (
         <div
           key={index}
           className="border border-[#3e3e3e] p-4 lg:p-5 rounded-lg space-y-3"

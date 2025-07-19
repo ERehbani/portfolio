@@ -3,37 +3,17 @@
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
+import { certificates } from "@/lib/constants"
 
-interface Certificate {
+
+
+
+
+type ContentCertifications = {
   title: string
-  institution: string
-  link: string
 }
 
-const certificates: Certificate[] = [
-  {
-    title: "Full Stack Web Developer",
-    institution: "Henry (2023)",
-    link: "https://res.cloudinary.com/dmnb6cfzj/image/upload/v1729287668/HenryCertificate_bg1qbo.png",
-  },
-  {
-    title: "Backend Programmation",
-    institution: "CoderHouse (2024)",
-    link: "https://res.cloudinary.com/dmnb6cfzj/image/upload/v1729287693/Coderhouse%20Certificate.png",
-  },
-  {
-    title: "English 3th Intermediate",
-    institution: "CEM English (2024)",
-    link: "https://res.cloudinary.com/dmnb6cfzj/image/upload/v1729288085/3rd%20Adults%20Intensive%20CEM%20English%20certificate.png",
-  },
-  {
-    title: "Lean Six Sigma",
-    institution: "Certiprof",
-    link: "https://res.cloudinary.com/dmnb6cfzj/image/upload/v1729288159/Lean%20Six%20Sigma%20certificate.png",
-  },
-]
-
-export default function Certifications() {
+export default function Certifications({content}: {content: ContentCertifications}) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextCertificate = () => {
@@ -59,7 +39,7 @@ export default function Certifications() {
       </button>
 
       <div className="flex flex-col justify-center w-full">
-        <h2 className="text-2xl font-semibold">Certificates</h2>
+        <h2 className="text-2xl font-semibold">{content.title}</h2>
 
         <div className="w-full overflow-hidden flex justify-center items-center">
           <div className="p-4 w-full h-40 flex items-center justify-center mx-auto">

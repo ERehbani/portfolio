@@ -1,0 +1,134 @@
+{
+    "head":{
+        "title": "Elian Rehbani | Desarrollador Frontend Next.js",
+        "description": "Portfolio de Elian Rehbani, Desarrollador Frontend con experiencia en React, Next.js, TypeScript y TailwindCSS.",
+        "keywords": "Elian Rehbani, frontend, frontend developer freelance, freelancer, front end it, front-end, upwork, freelancing, freelance job, desarrollador frontend, ReactJS, Next.js, TypeScript, TailwindCSS, desarrollo web, sitios para negocios, diseño web, desarrollador fullstack junior, métricas web, portfolio de desarrollador",
+        "og": {
+            "title": "Elian Rehbani | Desarrollador Frontend Next.js",
+            "description": "Desarrollo de sitios web modernos y escalables para negocios. Explora mis proyectos desarrollados con React, Next.js y herramientas actuales.",
+            "twitter": {
+                "title": "Elian Rehbani | Desarrollador Frontend Next.js",
+                "description": "Desarrollo de sitios web para negocios, incluyendo alojamiento, mantenimiento y análisis mensuales. Visita mi portfolio"
+            }
+        }
+    },
+    "footer": {
+        "title": "Hecho con",
+        "second_title": "Astro"
+    },
+    "profile": {
+        "openToWork": "Disponible",
+        "birthday": "25/11/2003",
+        "sendEmail": "Enviar correo",
+        "downloadCV": "Descargar CV"
+    },
+    "about": {
+        "title": "Sobre mí",
+        "description_1": " con experiencia en la construcción de soluciones web escalables, personalizadas y orientadas al producto. Me especializo en ",
+        "description_2": " He trabajado en proyectos que involucran inteligencia artificial, generación de contenido automático, sistemas de diagnóstico personalizados y la personalización de plataformas eCommerce. Tengo experiencia desarrollando desde MVPs hasta características complejas, siempre priorizando la experiencia del usuario, accesibilidad y rendimiento."
+    },
+    "certifications": {
+        "title": "Certificaciones"
+    },
+    "experience": {
+        "title": "Experiencia",
+        "second_title": "Proyectos",
+        "jobs": [
+            {
+                "title": "Frontend Developer & Diagnostics Experience Engineer",
+                "company": "COSMEE WORLD",
+                "location": "Remoto - Freelance",
+                "date": "Ene 2023 - Ene 2024",
+                "description": "Diseñé e implementé la interfaz web de diagnóstico cosmético con un enfoque en UX y visualizaciones interactivas. Integré IA para el análisis facial en colaboración con especialistas en visión por computadora. Conecté la app con plataformas externas como Shopify y Klaviyo. Optimicé la lógica del sistema para mejorar la precisión de las recomendaciones. Colaboré con equipos multidisciplinarios y gestioné entregas técnicas en un entorno ágil.",
+                "skills": [
+                    { "title": "React", "icon": "/svg/react.svg" },
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "OpenAI", "icon": "/svg/openai.svg" },
+                    { "title": "TypeScript", "icon": "/svg/typescript.svg" },
+                    { "title": "Tailwind CSS", "icon": "/svg/tailwindcss.svg" },
+                    { "title": "DaisyUI", "icon": "/svg/daisyui.svg" },
+                    { "title": "Firebase", "icon": "/svg/firebase.svg" },
+                    { "title": "Vercel", "icon": "/svg/vercel.svg" }
+                ]
+            },
+            {
+                "title": "Frontend Developer",
+                "company": "TICK Corp",
+                "location": "Remoto",
+                "date": "Oct 2024 - Mar 2025",
+                "description": "Implementé diseños web precisos basados en especificaciones del cliente. Optimicé el rendimiento del sitio web con un enfoque en velocidad y experiencia del usuario. Aplicé estrategias SEO y análisis web. Adapté funcionalidades para cumplir con requisitos específicos. Gestioné hospedaje y dominios, asegurando la estabilidad del sistema.",
+                "skills": [
+                    { "title": "React", "icon": "/svg/react.svg" },
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "TypeScript", "icon": "/svg/typescript.svg" },
+                    { "title": "Tailwind CSS", "icon": "/svg/tailwindcss.svg" },
+                    { "title": "Bootstrap", "icon": "/svg/bootstrap.svg" },
+                    { "title": "Git", "icon": "/svg/git.svg" },
+                    { "title": "Vercel", "icon": "/svg/vercel.svg" }
+                ]
+            },
+            {
+                "title": "Frontend Developer",
+                "company": "Dazlabs",
+                "location": "Remoto",
+                "date": "Ene 2023 - Ene 2024",
+                "description": " Diseñé e Implementé interfaces de usuario de alta calidad utilizando ReactJS. Trabajé en proyectos siguiendo las pautas de diseño de Figma. Colaboré estrechamente con los equipos de backend y frontend. Optimicé plantillas de frontend para mejorar el rendimiento y la eficiencia. Apliqué habilidades de resolución de problemas para superar desafíos técnicos.",
+                "skills": [
+                    { "title": "React", "icon": "/svg/react.svg" },
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "TypeScript", "icon": "/svg/typescript.svg" },
+                    { "title": "Tailwind CSS", "icon": "/svg/tailwindcss.svg" },
+                    { "title": "Shadcn UI", "icon": "/svg/shadcnui.svg" },
+                    { "title": "Git", "icon": "/svg/git.svg" },
+                    { "title": "MongoDB", "icon": "/svg/mongodb.svg" },
+                    { "title": "PostgreSQL", "icon": "/svg/postgresql.svg" }
+                ]
+            }
+        ],
+        "projects": [
+            {
+                "title": "Sistema de turnos",
+                "company": "Proyecto Full Stack",
+                "location": "Remoto",
+                "date": "Abr 2025 - Presente",
+                "description": "Sistema de turnos implementando un portal de usuario y un portal de vendedor, donde se pueden gestionar turnos y los usuarios pueden comunicarse con los vendedores.",
+                "skills": [
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "Tailwind CSS", "icon": "/svg/tailwindcss.svg" },
+                    { "title": "TypeScript", "icon": "/svg/typescript.svg" },
+                    { "title": "NestJS", "icon": "/svg/nestjs.svg" },
+                    { "title": "MongoDB", "icon": "/svg/mongodb.svg" },
+                    { "title": "Vercel", "icon": "/svg/vercel.svg" }
+                ]
+            },
+            {
+                "title": "Sistema de gestión de consorcio",
+                "company": "Proyecto Full Stack",
+                "location": "Remoto",
+                "date": "Dic 2024 - Mar 2025",
+                "description": "Sistema para gestionar consorcios, inquilinos y facturación PDF. Incluye flujos para automatizar registros y descargas de documentos.",
+                "skills": [
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "Tailwind CSS", "icon": "/svg/tailwindcss.svg" },
+                    { "title": "TypeScript", "icon": "/svg/typescript.svg" },
+                    { "title": "Firebase", "icon": "/svg/firebase.svg" },
+                    { "title": "Vercel", "icon": "/svg/vercel.svg" }
+                ]
+            },
+            {
+                "title": "Plataforma de cursos",
+                "company": "Proyecto Full Stack",
+                "location": "Remoto",
+                "date": "Jun 2023 - Ago 2023",
+                "description": "Plataforma de cursos implementando un portal de usuario y un portal de vendedor, donde se pueden gestionar turnos y los usuarios pueden comunicarse con los vendedores.",
+                "skills": [
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "Tailwind CSS", "icon": "/svg/tailwindcss.svg" },
+                    { "title": "TypeScript", "icon": "/svg/typescript.svg" },
+                    { "title": "Firebase", "icon": "/svg/firebase.svg" },
+                    { "title": "Vercel", "icon": "/svg/vercel.svg" }
+                ]
+            }
+        ]
+    }
+}

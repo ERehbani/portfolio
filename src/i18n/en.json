@@ -1,4 +1,17 @@
 {
+    "head":{
+        "title": "Elian Rehbani | Frontend Developer Next.js",
+        "description": "Portfolio of Elian Rehbani, Frontend Developer with experience in React, Next.js, TypeScript and TailwindCSS.",
+        "keywords": "Elian Rehbani, frontend, frontend developer freelance, freelancer, front end it, front-end, upwork, freelancing, freelance job, frontend developer, ReactJS, Next.js, TypeScript, TailwindCSS, web development, business websites, web design, junior fullstack developer, web metrics, developer portfolio",
+        "og": {
+            "title": "Elian Rehbani | Frontend Developer Next.js",
+            "description": "Design and development of modern and scalable websites for businesses. Explore my projects developed with React, Next.js and current tools.",
+            "twitter": {
+                "title": "Elian Rehbani | Frontend Developer Next.js",
+                "description": "Custom websites for businesses, including hosting, maintenance, and monthly analytics. Check out my portfolio"
+            }
+        }
+    },
     "footer": {
         "title": "Made with",
         "second_title": "Astro"
@@ -12,6 +25,111 @@
     "about": {
         "title": "About me",
         "description_1": " with experience in building scalable, custom, and product-oriented web solutions. I specialize in ",
-        "description_2": " and modern tools from the JavaScript ecosystem such as TypeScript, TailwindCSS, testing frameworks, and version control systems. I've worked on projects involving artificial intelligence, automated content generation, personalized diagnostic systems, and the customization of eCommerce platforms. I have experience developing everything from MVPs to complex features, always prioritizing user experience, accessibility, and performance."
+        "description_2": " I've worked on projects involving artificial intelligence, automated content generation, personalized diagnostic systems, and the customization of eCommerce platforms. I have experience developing everything from MVPs to complex features, always prioritizing user experience, accessibility, and performance."
+    },
+    "certifications": {
+        "title": "Certifications"
+    },
+    "experience": {
+        "title": "Experience",
+        "second_title": "Projects",
+        "jobs": [
+            {
+                "title": "Frontend Developer & Diagnostics Experience Engineer",
+                "company": "COSMEE WORLD",
+                "location": "Remote - Freelance",
+                "date": "Jan 2023 - Jan 2024",
+                "description": "Designed and developed the cosmetic diagnostic web interface with a focus on UX and interactive visualizations. Integrated AI for facial analysis in collaboration with computer vision specialists. Connected the app with external platforms such as Shopify and Klaviyo. Optimized system logic to improve the accuracy of recommendations. Collaborated with multidisciplinary teams and managed technical deliveries in an agile environment.",
+                "skills": [
+                    { "title": "React", "icon": "/svg/react.svg" },
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "OpenAI", "icon": "/svg/openai.svg" },
+                    { "title": "TypeScript", "icon": "/svg/typescript.svg" },
+                    { "title": "Tailwind CSS", "icon": "/svg/tailwindcss.svg" },
+                    { "title": "DaisyUI", "icon": "/svg/daisyui.svg" },
+                    { "title": "Firebase", "icon": "/svg/firebase.svg" },
+                    { "title": "Vercel", "icon": "/svg/vercel.svg" }
+                ]
+            },
+            {
+                "title": "Frontend Developer",
+                "company": "TICK Corp",
+                "location": "Remote",
+                "date": "October 2024 - March 2025",
+                "description": "Implemented accurate web designs based on client specifications. Optimized website performance with a focus on speed and user experience. Applied SEO strategies and web analytics. Adapted functionalities to meet specific requirements. Managed hosting and domains, ensuring system stability.",
+                "skills": [
+                    { "title": "React", "icon": "/svg/react.svg" },
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "TypeScript", "icon": "/svg/typescript.svg" },
+                    { "title": "Tailwind CSS", "icon": "/svg/tailwindcss.svg" },
+                    { "title": "Bootstrap", "icon": "/svg/bootstrap.svg" },
+                    { "title": "Git", "icon": "/svg/git.svg" },
+                    { "title": "Vercel", "icon": "/svg/vercel.svg" }
+                ]
+            },
+            {
+                "title": "Frontend Developer",
+                "company": "Dazlabs",
+                "location": "Remote",
+                "date": "Jan 2023 - Jan 2024",
+                "description": "Designed and implemented high-quality user interfaces using ReactJS. Worked on projects following Figma design guidelines. Collaborated closely with both backend and frontend teams. Optimized frontend templates to enhance performance and efficiency. Applied problem-solving skills to overcome technical challenges.",
+                "skills": [
+                    { "title": "React", "icon": "/svg/react.svg" },
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "TypeScript", "icon": "/svg/typescript.svg" },
+                    { "title": "Tailwind CSS", "icon": "/svg/tailwindcss.svg" },
+                    { "title": "Shadcn UI", "icon": "/svg/shadcnui.svg" },
+                    { "title": "Git", "icon": "/svg/git.svg" },
+                    { "title": "MongoDB", "icon": "/svg/mongodb.svg" },
+                    { "title": "PostgreSQL", "icon": "/svg/postgresql.svg" }
+                ]
+            }
+        ],
+        "projects": [
+            {
+                "title": "Appointment booking system",
+                "company": "Full Stack project",
+                "location": "Remote",
+                "date": "Apr 2025 - Present",
+                "description": "Appointment system implementing a user portal and a vendor portal, where appointments can be managed and users can communicate with vendors.",
+                "skills": [
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "Tailwind CSS", "icon": "/svg/tailwindcss.svg" },
+                    { "title": "TypeScript", "icon": "/svg/typescript.svg" },
+                    { "title": "NestJS", "icon": "/svg/nestjs.svg" },
+                    { "title": "MongoDB", "icon": "/svg/mongodb.svg" },
+                    { "title": "Vercel", "icon": "/svg/vercel.svg" }
+                ]
+            },
+            {
+                "title": "Consortium management system",
+                "company": "Full Stack project",
+                "location": "Remote",
+                "date": "Dic 2024 - Mar 2025",
+                "description": "System for managing consortia, tenants, and PDF invoicing. Includes workflows for automating registrations and document downloads.",
+                "skills": [
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "Tailwind CSS", "icon": "/svg/tailwindcss.svg" },
+                    { "title": "TypeScript", "icon": "/svg/typescript.svg" },
+                    { "title": "Firebase", "icon": "/svg/firebase.svg" },
+                    { "title": "Vercel", "icon": "/svg/vercel.svg" }
+                ]
+            },
+            {
+                "title": "Talent Forge, a course platform",
+                "company": "Full Stack project",
+                "location": "Remote",
+                "date": "June 2023 - August 2023",
+                "description": "I participated in the creation of a web platform based on the purchase and sale of courses in which I gained knowledge in Figma, Git Flow and managed to implement the Mercado Pago payment gateway to make purchases on the web. I was part of the Frontend section directing its web design, declaring the color palette of the platform and distribution of the components and its responsive design. Using for the creation of the same Javascript, MongoDB, ExpressJS, React JS, CSS and Tailwind",
+                "skills": [
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "Tailwind CSS", "icon": "/svg/tailwindcss.svg" },
+                    { "title": "Mercado Pago", "icon": "/svg/mercado-pago.svg" },
+                    { "title": "TypeScript", "icon": "/svg/typescript.svg" },
+                    { "title": "PostgreSQL", "icon": "/svg/postgresql.svg" },
+                    { "title": "Vercel", "icon": "/svg/vercel.svg" }
+                ]
+            }
+        ]
     }
 }

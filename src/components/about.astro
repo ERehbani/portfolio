@@ -1,20 +1,19 @@
-<div class="mx-auto h-full flex items-center ">
-  <!-- Versión corregida -->
-  <div class="glass-card content-center text-[#3e3e3e] dark:text-white h-fit lg:h-full rounded-2xl p-3 lg:px-8 max-h-80 overflow-hidden hover:shadow-md hover:shadow-[#3e3e3e] transition-shadow overflow-y-auto styled-scrollbar">
-      <!-- Título fijo -->
-      <h2 class="text-2xl font-semibold flex-shrink-0">About me</h2>
-      
-      <!-- Contenido con scroll y espaciado original -->
-      <div class="flex-1 overflow-y-auto styled-scrollbar mt-3">
-          <p class="text-[#858585] text-sm">
-              <b>Frontend Developer</b> with experience in building scalable, custom, and product-oriented
-              web solutions. I specialize in <b>ReactJS</b>, <b>Next.js</b>, and modern
-              tools from the JavaScript ecosystem such as TypeScript, TailwindCSS, testing
-              frameworks, and version control systems. I've worked on projects involving
-              artificial intelligence, automated content generation, personalized
-              diagnostic systems, and the customization of eCommerce platforms. I have experience
-              developing everything from MVPs to complex features, always prioritizing
-              user experience, accessibility, and performance.
-          </p>
-      </div>
+---
+const { content } = Astro.props;
+---
+
+<div class="mx-auto h-full flex items-center">
+  <div
+    class="glass-card content-center text-[#3e3e3e] dark:text-white h-fit lg:h-full rounded-2xl p-3 lg:px-8 max-h-80 overflow-hidden hover:shadow-md hover:shadow-[#3e3e3e] transition-shadow overflow-y-auto styled-scrollbar"
+  >
+    <h2 class="text-2xl font-semibold flex-shrink-0">{content.title}</h2>
+
+    <div class="flex-1 overflow-y-auto styled-scrollbar mt-3">
+      <p class="text-[#858585] text-sm">
+        <b>Frontend Developer</b>{content.description_1}<b>ReactJS</b>, <b
+          >Next.js</b
+        >,{content.description_2}
+      </p>
+    </div>
   </div>
+</div>

@@ -5,16 +5,18 @@ import Certifications from "../components/certifications";
 import Experience from "../components/experience";
 import Profile from "../components/profile";
 import Skills from "../components/skills";
-import Analytics from "@vercel/analytics/astro"
-import  SpeedInsights  from "@vercel/speed-insights/astro"
+import Analytics from "@vercel/analytics/astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import en from "@/i18n/en.json"
 import "../styles/global.css";
 
-// const redirectLang = Astro.request.headers.get('accept-language') || '';
-// const lang = redirectLang.toLowerCase().startsWith('es') ? 'es' : 'en';
+export const prerender = false;
 
-// Astro.redirect(`/${lang}`);
+const acceptLang = Astro.request.headers.get("accept-language") || "";
+const preferred = acceptLang.split(",")[0]?.split("-")[0] || "no-detectado";
+const lang = ["es", "en"].includes(preferred) ? preferred : "en";
 
-
+Astro.redirect(`/${lang}`);
 ---
 
 <html lang="en">
@@ -36,15 +38,11 @@ import "../styles/global.css";
     />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>
-      Elian Rehbani | Desarrollador Frontend Next.js
-    </title>
+    <title>Elian Rehbani | Desarrollador Frontend Next.js</title>
     <link rel="canonical" href="https://www.elianrehbani.com/" />
-
 
     <!-- <link rel="alternate" hreflang="en" href="/en" />
     <link rel="alternate" hreflang="es" href="/es" /> -->
-
 
     <meta
       name="description"
@@ -155,22 +153,22 @@ import "../styles/global.css";
             <div
               class="lg:col-start-1 lg:col-end-3 row-start-1 row-end-7 h-full"
             >
-              <Profile client:idle />
+              <Profile client:idle content={en.profile}/>
             </div>
             <div
               class="lg:col-start-3 lg:col-end-7 row-start-1 row-end-3 h-full"
             >
-              <About />
+              <About content={en.about}/>
             </div>
             <div
               class="lg:col-start-7 lg:col-end-9 row-start-1 row-end-3 h-full"
             >
-              <Certifications client:idle />
+              <Certifications client:idle content={en.certifications}/>
             </div>
             <div
               class="lg:col-start-3 lg:col-end-9 row-start-3 row-end-6 h-full"
             >
-              <Experience client:idle />
+              <Experience client:idle content={en.experience}/>
             </div>
             <div
               class="lg:col-start-3 lg:col-end-9 row-start-6 row-end-7 h-full"
