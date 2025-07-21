@@ -10,20 +10,27 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 import en from "@/i18n/en.json"
 import "../styles/global.css";
 
-export const prerender = false;
-
-const acceptLang = Astro.request.headers.get("accept-language") || "";
-const preferred = acceptLang.split(",")[0]?.split("-")[0] || "no-detectado";
-const lang = ["es", "en"].includes(preferred) ? preferred : "en";
-
-Astro.redirect(`/${lang}`);
+// REMOVIDO: export const prerender = false;
+// REMOVIDO: detección del lado del servidor
 ---
 
 <html lang="en">
   <head>
     <script>
-      // Aplicar tema inmediatamente antes de que se renderice React
+      // Detección de idioma y redirección del lado del cliente
       (function () {
+        // Solo ejecutar en la página raíz
+        if (window.location.pathname === '/') {
+          const userLang = navigator.language.split('-')[0];
+          const supportedLangs = ['es', 'en'];
+          const lang = supportedLangs.includes(userLang) ? userLang : 'en';
+          
+          // Redirigir al idioma detectado
+          window.location.href = `/${lang}`;
+          return; // Salir para evitar ejecutar el resto
+        }
+
+        // Aplicar tema inmediatamente antes de que se renderice React
         const theme = localStorage.getItem("theme") || "dark";
         if (theme === "dark") {
           document.documentElement.classList.add("dark");
