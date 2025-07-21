@@ -5,10 +5,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import { certificates } from "@/lib/constants"
 
-
-
-
-
 type ContentCertifications = {
   title: string
 }
