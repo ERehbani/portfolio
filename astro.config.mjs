@@ -1,24 +1,32 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
-// import vercel from "@astrojs/vercel/serverless" // Comentado para modo estático
-
+import vercel from "@astrojs/vercel";
 import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'static', // Cambiar a estático
-  // adapter: vercel({}), // Comentado para modo estático
+  output: 'server',
+  adapter: vercel({
+    webAnalytics: { enabled: true },
+    edgeMiddleware: false, // Desactivar edge para evitar problemas
+  }),
+  
   vite: {
-      plugins: [tailwindcss()],
+    plugins: [tailwindcss()],
+    ssr: {
+      // Externalizar dependencias que pueden causar problemas
+      external: ["@astrojs/react", "@vercel/analytics", "@vercel/speed-insights"],
     },
-    i18n: {
-      defaultLocale: 'es',
-      locales: ['en', 'es', 'fr', 'kr'],
-      routing: {
-        prefixDefaultLocale: true
-      }
-    },
+  },
+  
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['en', 'es', 'fr', 'kr'],
+    routing: {
+      prefixDefaultLocale: true
+    }
+  },
 
   integrations: [react()],
 });

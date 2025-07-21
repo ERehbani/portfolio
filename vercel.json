@@ -1,0 +1,10 @@
+{
+    "functions": {
+      "dist/entry.mjs": {
+        "maxDuration": 30,
+        "memory": 1024
+      }
+    },
+    "regions": ["iad1"],
+    "framework": "astro"
+  }
