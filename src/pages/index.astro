@@ -10,7 +10,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 import en from "@/i18n/en.json"
 import "../styles/global.css";
 
-export const prerender = false;
+
 
 const acceptLang = Astro.request.headers.get("accept-language") || "";
 const preferred = acceptLang.split(",")[0]?.split("-")[0] || "no-detectado";
