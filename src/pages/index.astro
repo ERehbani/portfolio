@@ -15,24 +15,8 @@ import "../styles/global.css";
   <head>
     <script>
       // Detección de idioma y redirección del lado del cliente
-      (function () {
-        // Solo ejecutar en la página raíz
-        if (window.location.pathname === '/') {
-          const userLang = navigator.language.split('-')[0];
-          const supportedLangs = ['es', 'en'];
-          const lang = supportedLangs.includes(userLang) ? userLang : 'en';
-          
-          // Redirigir al idioma detectado
-          window.location.href = `/${lang}`;
-          return; // Salir para evitar ejecutar el resto
-        }
+      window.location.href = "/es"; // solo para testear si elimina el error
 
-        // Aplicar tema inmediatamente antes de que se renderice React
-        const theme = localStorage.getItem("theme") || "dark";
-        if (theme === "dark") {
-          document.documentElement.classList.add("dark");
-        }
-      })();
     </script>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/svg/favicon.svg" />
