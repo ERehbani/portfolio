@@ -1,14 +1,14 @@
 ---
+import About from "@/components/about.astro";
+import Certifications from "@/components/certifications";
+import Experience from "@/components/experience";
+import Profile from "@/components/profile";
+import Skills from "@/components/skills";
+import en from "@/i18n/en.json";
 import Image from "astro/components/Image.astro";
-import About from "../components/about.astro";
-import Certifications from "../components/certifications";
-import Experience from "../components/experience";
-import Profile from "../components/profile";
-import Skills from "../components/skills";
-import es from "@/i18n/es.json";
 
-import "../styles/global.css";
 import Footer from "@/components/footer.astro";
+import "@/styles/global.css"
 ---
 
 <html lang="en">
@@ -30,7 +30,7 @@ import Footer from "@/components/footer.astro";
     />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{es.head.title}</title>
+    <title>{en.head.title}</title>
     <link rel="canonical" href="https://www.elianrehbani.com/" />
 
     <!-- <link rel="alternate" hreflang="en" href="/en" />
@@ -38,22 +38,22 @@ import Footer from "@/components/footer.astro";
 
     <meta
       name="description"
-      content={es.head.description}
+      content={en.head.description}
     />
     <meta
       name="keywords"
-      content={es.head.keywords}
+      content={en.head.keywords}
     />
     <meta name="author" content="Elian Rehbani" />
 
     <!-- Open Graph -->
     <meta
       property="og:title"
-      content={es.head.og.title}
+      content={en.head.og.title}
     />
     <meta
       property="og:description"
-      content={es.head.og.description}
+      content={en.head.og.description}
     />
     <meta property="og:image" content="/og.png" />
     <meta property="og:url" content="https://www.elianrehbani.com/" />
@@ -63,11 +63,11 @@ import Footer from "@/components/footer.astro";
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content={es.head.og.twitter.title}
+      content={en.head.og.twitter.title}
     />
     <meta
       name="twitter:description"
-      content={es.head.og.twitter.description}
+      content={en.head.og.twitter.description}
     />
     <meta name="twitter:image" content="/og.png" />
     <meta name="robots" content="index, follow" />
@@ -142,22 +142,22 @@ import Footer from "@/components/footer.astro";
             <div
               class="lg:col-start-1 lg:col-end-3 row-start-1 row-end-7 h-full"
             >
-              <Profile client:idle content={es.profile} />
+              <Profile client:idle content={en.profile} />
             </div>
             <div
               class="lg:col-start-3 lg:col-end-7 row-start-1 row-end-3 h-full"
             >
-              <About content={es.about}/>
+              <About content={en.about}/>
             </div>
             <div
               class="lg:col-start-7 lg:col-end-9 row-start-1 row-end-3 h-full"
             >
-              <Certifications client:idle content={es.certifications}/>
+              <Certifications client:idle content={en.certifications}/>
             </div>
             <div
               class="lg:col-start-3 lg:col-end-9 row-start-3 row-end-6 h-full"
             >
-              <Experience client:idle content={es.experience}/>
+              <Experience client:idle content={en.experience}/>
             </div>
             <div
               class="lg:col-start-3 lg:col-end-9 row-start-6 row-end-7 h-full"
@@ -165,7 +165,7 @@ import Footer from "@/components/footer.astro";
               <Skills client:idle />
             </div>
           </div>
-         <Footer content={es.footer}/>
+         <Footer content={en.footer}/>
         </div>
       </div>
     </div>
