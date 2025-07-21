@@ -14,7 +14,7 @@ const InfiniteTextCarousel = () => {
 
   const plugin = useRef(
     Autoplay({
-      delay: 1700, 
+      delay: 1700,
       stopOnInteraction: false,
       stopOnMouseEnter: false,
       stopOnFocusIn: false,
