@@ -1,17 +1,17 @@
 ---
 import Image from "astro/components/Image.astro";
-import About from "@/components/about.astro";
-import Certifications from "@/components/certifications";
-import Experience from "@/components/experience";
-import Profile from "@/components/profile";
-import Skills from "@/components/skills";
+import About from "../components/about.astro";
+import Certifications from "../components/certifications";
+import Experience from "../components/experience";
+import Profile from "../components/profile";
+import Skills from "../components/skills";
 import es from "@/i18n/es.json";
 
-import "@/styles/global.css";
+import "../styles/global.css";
 import Footer from "@/components/footer.astro";
 ---
 
-<html lang="es">
+<html lang="en">
   <head>
     <script>
       // Aplicar tema inmediatamente antes de que se renderice React
@@ -32,6 +32,9 @@ import Footer from "@/components/footer.astro";
     <meta name="generator" content={Astro.generator} />
     <title>{es.head.title}</title>
     <link rel="canonical" href="https://www.elianrehbani.com/" />
+
+    <!-- <link rel="alternate" hreflang="en" href="/en" />
+    <link rel="alternate" hreflang="es" href="/es" /> -->
 
     <meta
       name="description"
@@ -139,7 +142,7 @@ import Footer from "@/components/footer.astro";
             <div
               class="lg:col-start-1 lg:col-end-3 row-start-1 row-end-7 h-full"
             >
-              <Profile  content={es.profile} />
+              <Profile client:idle content={es.profile} />
             </div>
             <div
               class="lg:col-start-3 lg:col-end-7 row-start-1 row-end-3 h-full"
@@ -149,17 +152,17 @@ import Footer from "@/components/footer.astro";
             <div
               class="lg:col-start-7 lg:col-end-9 row-start-1 row-end-3 h-full"
             >
-              <Certifications content={es.certifications}/>
+              <Certifications client:idle content={es.certifications}/>
             </div>
             <div
               class="lg:col-start-3 lg:col-end-9 row-start-3 row-end-6 h-full"
             >
-              <Experience content={es.experience}/>
+              <Experience client:idle content={es.experience}/>
             </div>
             <div
               class="lg:col-start-3 lg:col-end-9 row-start-6 row-end-7 h-full"
             >
-              <Skills  />
+              <Skills client:idle />
             </div>
           </div>
          <Footer content={es.footer}/>
