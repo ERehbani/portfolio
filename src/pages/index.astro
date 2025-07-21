@@ -12,15 +12,15 @@ import "../styles/global.css";
 
 export const prerender = true;
 
-const acceptLang = Astro.request.headers.get("accept-language") || "";
-const preferred = acceptLang.split(",")[0]?.split("-")[0] || "es";
-const lang = ["es", "en", "fr", "kr"].includes(preferred) ? preferred : "es";
+// const acceptLang = Astro.request.headers.get("accept-language") || "";
+// const preferred = acceptLang.split(",")[0]?.split("-")[0] || "es";
+// const lang = ["es", "en", "fr", "kr"].includes(preferred) ? preferred : "es";
 
-function handleRedirect() {
-  return Astro.redirect(`/${lang}`, 301);
-}
+// function handleRedirect() {
+//   return Astro.redirect(`/${lang}`, 301);
+// }
 
-handleRedirect();
+// handleRedirect();
 ---
 
 <html lang="en">
@@ -28,6 +28,16 @@ handleRedirect();
     <script>
       // Aplicar tema inmediatamente antes de que se renderice React
       (function () {
+        if (window.location.pathname === '/') {
+          const userLang = navigator.language.split('-')[0];
+          const supportedLangs = ['es', 'en'];
+          const lang = supportedLangs.includes(userLang) ? userLang : 'en';
+          
+          // Redirigir al idioma detectado
+          window.location.href = `/${lang}`;
+          return; // Salir para evitar ejecutar el resto
+        }
+
         const theme = localStorage.getItem("theme") || "dark";
         if (theme === "dark") {
           document.documentElement.classList.add("dark");
