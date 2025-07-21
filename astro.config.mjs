@@ -18,7 +18,7 @@ export default defineConfig({
     // Optimizaciones para serverless
   },
   i18n: {
-    defaultLocale: 'es',
+    defaultLocale: 'en',
     locales: ['en', 'es', 'fr', 'kr'],
     routing: {
       prefixDefaultLocale: true,
