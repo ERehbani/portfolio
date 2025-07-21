@@ -33,9 +33,6 @@ import Footer from "@/components/footer.astro";
     <title>{es.head.title}</title>
     <link rel="canonical" href="https://www.elianrehbani.com/" />
 
-    <!-- <link rel="alternate" hreflang="en" href="/en" />
-    <link rel="alternate" hreflang="es" href="/es" /> -->
-
     <meta
       name="description"
       content={es.head.description}
@@ -142,7 +139,7 @@ import Footer from "@/components/footer.astro";
             <div
               class="lg:col-start-1 lg:col-end-3 row-start-1 row-end-7 h-full"
             >
-              <Profile client:idle content={es.profile} />
+              <Profile  content={es.profile} />
             </div>
             <div
               class="lg:col-start-3 lg:col-end-7 row-start-1 row-end-3 h-full"
@@ -152,17 +149,17 @@ import Footer from "@/components/footer.astro";
             <div
               class="lg:col-start-7 lg:col-end-9 row-start-1 row-end-3 h-full"
             >
-              <Certifications client:idle content={es.certifications}/>
+              <Certifications content={es.certifications}/>
             </div>
             <div
               class="lg:col-start-3 lg:col-end-9 row-start-3 row-end-6 h-full"
             >
-              <Experience client:idle content={es.experience}/>
+              <Experience content={es.experience}/>
             </div>
             <div
               class="lg:col-start-3 lg:col-end-9 row-start-6 row-end-7 h-full"
             >
-              <Skills client:idle />
+              <Skills  />
             </div>
           </div>
          <Footer content={es.footer}/>
