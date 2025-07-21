@@ -7,17 +7,14 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  adapter: vercel({
-    webAnalytics: { enabled: true },
-    edgeMiddleware: false, // Desactivar edge para evitar problemas
-  }),
+  adapter: vercel({}),
   
   vite: {
     plugins: [tailwindcss()],
-    ssr: {
-      // Externalizar dependencias que pueden causar problemas
-      external: ["@astrojs/react", "@vercel/analytics", "@vercel/speed-insights"],
-    },
+    // ssr: {
+    //   // Externalizar dependencias que pueden causar problemas
+    //   external: ["@astrojs/react", "@vercel/analytics", "@vercel/speed-insights"],
+    // },
   },
   
   i18n: {
