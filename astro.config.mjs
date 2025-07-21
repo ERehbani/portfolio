@@ -17,12 +17,12 @@ export default defineConfig({
     plugins: [tailwindcss()],
     // Optimizaciones para serverless
   },
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'es', 'fr', 'kr'],
-    routing: {
-      prefixDefaultLocale: true,
-    }
-  },
+  // i18n: {
+  //   defaultLocale: 'en',
+  //   locales: ['en', 'es', 'fr', 'kr'],
+  //   routing: {
+  //     prefixDefaultLocale: true,
+  //   }
+  // },
   integrations: [react()],
 });
