@@ -16,11 +16,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     // Optimizaciones para serverless
-    build: {
-      rollupOptions: {
-        external: ['sharp']
-      }
-    }
   },
   i18n: {
     defaultLocale: 'es',
