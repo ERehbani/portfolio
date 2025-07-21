@@ -7,16 +7,20 @@ import Profile from "../components/profile";
 import Skills from "../components/skills";
 import Analytics from "@vercel/analytics/astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
-import en from "@/i18n/en.json"
+import en from "@/i18n/en.json";
 import "../styles/global.css";
 
 export const prerender = true;
 
 const acceptLang = Astro.request.headers.get("accept-language") || "";
-const preferred = acceptLang.split(",")[0]?.split("-")[0] || "no-detectado";
-const lang = ["es", "en"].includes(preferred) ? preferred : "en";
+const preferred = acceptLang.split(",")[0]?.split("-")[0] || "es";
+const lang = ["es", "en", "fr", "kr"].includes(preferred) ? preferred : "es";
 
-Astro.redirect(`/${lang}`);
+function handleRedirect() {
+  return Astro.redirect(`/${lang}`, 301);
+}
+
+handleRedirect();
 ---
 
 <html lang="en">
@@ -153,22 +157,22 @@ Astro.redirect(`/${lang}`);
             <div
               class="lg:col-start-1 lg:col-end-3 row-start-1 row-end-7 h-full"
             >
-              <Profile client:idle content={en.profile}/>
+              <Profile client:idle content={en.profile} />
             </div>
             <div
               class="lg:col-start-3 lg:col-end-7 row-start-1 row-end-3 h-full"
             >
-              <About content={en.about}/>
+              <About content={en.about} />
             </div>
             <div
               class="lg:col-start-7 lg:col-end-9 row-start-1 row-end-3 h-full"
             >
-              <Certifications client:idle content={en.certifications}/>
+              <Certifications client:idle content={en.certifications} />
             </div>
             <div
               class="lg:col-start-3 lg:col-end-9 row-start-3 row-end-6 h-full"
             >
-              <Experience client:idle content={en.experience}/>
+              <Experience client:idle content={en.experience} />
             </div>
             <div
               class="lg:col-start-3 lg:col-end-9 row-start-6 row-end-7 h-full"
