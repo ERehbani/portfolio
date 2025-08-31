@@ -65,7 +65,7 @@ export default function ProfileCard({ content }: { content: ContentProfile }) {
               height={100}
             />
           </span>
-          <div className="flex items-center gap-2 col-span-2 [@media(max-height:600px)]:gap-1 w-full max-[1130px]:flex-col min-[1130px]:flex-row">
+          <div className="flex items-center justify-center gap-2 col-span-2 [@media(max-height:600px)]:gap-1 w-full max-[1130px]:flex-col min-[1130px]:flex-row">
             <a
               href="mailto:elianrhbn@gmail.com"
               className="text-sm flex items-center gap-2 justify-center py-3 w-full lg:w-fit lg:px-3 rounded-md bg-[#3e3e3e] dark:bg-white text-black hover:[&_svg]:text-white dark:hover:[&_svg]:text-black hover:text-white transition-colors [@media(max-height:700px)]:py-2 [@media(max-height:600px)]:py-1.5 [@media(max-height:600px)]:text-xs"
@@ -73,7 +73,7 @@ export default function ProfileCard({ content }: { content: ContentProfile }) {
               <Mail className="w-5 text-white dark:text-[#3e3e3e] transition-all [@media(max-height:600px)]:w-4" />
               <span className="lg:hidden text-white dark:text-[#3e3e3e]">{content.sendEmail}</span>
             </a>
-            <span className="hidden lg:block text-sm text-[#3e3e3e] dark:text-white [@media(max-height:600px)]:text-xs">
+            <span className="hidden lg:block text-sm text-center text-[#3e3e3e] dark:text-white [@media(max-height:600px)]:text-xs">
               elianrhbn@gmail.com
             </span>
           </div>
