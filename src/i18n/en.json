@@ -39,6 +39,10 @@
                 "company": "COSMEE WORLD",
                 "location": "Remote - Freelance",
                 "date": "Jan 2023 - Jan 2024",
+                "link": {
+                    "title": true,
+                    "url": "https://cosmeeworld.com/"
+                },
                 "description": "Designed and developed the cosmetic diagnostic web interface with a focus on UX and interactive visualizations. Integrated AI for facial analysis in collaboration with computer vision specialists. Connected the app with external platforms such as Shopify and Klaviyo. Optimized system logic to improve the accuracy of recommendations. Collaborated with multidisciplinary teams and managed technical deliveries in an agile environment.",
                 "skills": [
                     { "title": "React", "icon": "/svg/react.svg" },
@@ -56,6 +60,10 @@
                 "company": "TICK Corp",
                 "location": "Remote",
                 "date": "October 2024 - March 2025",
+                "link": {
+                    "title": false,
+                    "url": ""
+                },
                 "description": "Implemented accurate web designs based on client specifications. Optimized website performance with a focus on speed and user experience. Applied SEO strategies and web analytics. Adapted functionalities to meet specific requirements. Managed hosting and domains, ensuring system stability.",
                 "skills": [
                     { "title": "React", "icon": "/svg/react.svg" },
@@ -72,6 +80,10 @@
                 "company": "Dazlabs",
                 "location": "Remote",
                 "date": "Jan 2023 - Jan 2024",
+                "link": {
+                    "title": false,
+                    "url": ""
+                },
                 "description": "Designed and implemented high-quality user interfaces using ReactJS. Worked on projects following Figma design guidelines. Collaborated closely with both backend and frontend teams. Optimized frontend templates to enhance performance and efficiency. Applied problem-solving skills to overcome technical challenges.",
                 "skills": [
                     { "title": "React", "icon": "/svg/react.svg" },
@@ -87,10 +99,49 @@
         ],
         "projects": [
             {
+                "title": "E11EVEN Luxury Cars",
+                "company": "Front end project",
+                "location": "Remote",
+                "date": "Apr 2025 - Present",
+                "link": {
+                    "title": true,
+                    "url": "https://e11even.com.ar/"
+                },
+                "description": "Platform for luxury car dealerships with a car catalog, reservations, and contact.",
+                "skills": [
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "Tailwind CSS", "icon": "/svg/tailwindcss.svg" },
+                    { "title": "TypeScript", "icon": "/svg/typescript.svg" },
+                    { "title": "Firebase", "icon": "/svg/firebase.svg" },
+                    { "title": "Vercel", "icon": "/svg/vercel.svg" }
+                ]
+            },
+            {
+                "title": "SOSA VIVANCO - Wells and enterprises",
+                "company": "Front end project",
+                "location": "Remote",
+                "date": "Oct 2024 - Ene 2025",
+                "link": {
+                    "title": true,
+                    "url": "https://www.emprendimientosypozos.com.ar/"
+                },
+                "description": "Real estate platform with property catalog, property details and design adaptation to client's request",
+                "skills": [
+                    { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
+                    { "title": "Bootstrap", "icon": "/svg/bootstrap.svg" },
+                    { "title": "Git", "icon": "/svg/git.svg" },
+                    { "title": "Vercel", "icon": "/svg/vercel.svg" }
+                ]
+            },
+            {
                 "title": "Appointment booking system",
                 "company": "Full Stack project",
                 "location": "Remote",
                 "date": "Apr 2025 - Present",
+                "link": {
+                    "title": false,
+                    "url": ""
+                },
                 "description": "Appointment system implementing a user portal and a vendor portal, where appointments can be managed and users can communicate with vendors.",
                 "skills": [
                     { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
@@ -106,6 +157,10 @@
                 "company": "Full Stack project",
                 "location": "Remote",
                 "date": "Dic 2024 - Mar 2025",
+                "link": {
+                    "title": false,
+                    "url": ""
+                },
                 "description": "System for managing consortia, tenants, and PDF invoicing. Includes workflows for automating registrations and document downloads.",
                 "skills": [
                     { "title": "Next.js", "icon": "/svg/nextdotjs.svg" },
@@ -119,6 +174,10 @@
                 "title": "Talent Forge, a course platform",
                 "company": "Full Stack project",
                 "location": "Remote",
+                "link": {
+                    "title": false,
+                    "url": ""
+                },
                 "date": "June 2023 - August 2023",
                 "description": "I participated in the creation of a web platform based on the purchase and sale of courses in which I gained knowledge in Figma, Git Flow and managed to implement the Mercado Pago payment gateway to make purchases on the web. I was part of the Frontend section directing its web design, declaring the color palette of the platform and distribution of the components and its responsive design. Using for the creation of the same Javascript, MongoDB, ExpressJS, React JS, CSS and Tailwind",
                 "skills": [

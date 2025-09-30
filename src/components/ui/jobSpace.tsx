@@ -1,11 +1,12 @@
 import type { Job } from "@/lib/types";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 
 
 
 
-const jobSpace = ({ experience }: { experience: Job[] }) => {
+const JobSpace = ({ experience }: { experience: Job[] }) => {
   return (
     <div className="space-y-4 pr-4">
       {experience.map((exp: Job, index: number) => (
@@ -15,9 +16,16 @@ const jobSpace = ({ experience }: { experience: Job[] }) => {
         >
           <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2">
             <div className="flex-1">
-              <h3 className="font-semibold text-sm lg:text-base leading-tight">
+             <section className="flex items-center gap-2">
+             <h3 className="font-semibold text-sm lg:text-base leading-tight">
                 {exp.title}
               </h3>
+              {exp.link.title && (
+                <a href={exp.link.url} target="_blank" rel="noopener noreferrer">
+                  <SquareArrowOutUpRight className="w-4 h-4 text-gray-300" />
+                </a>
+              )}
+             </section>
               <p className="font-medium text-[#3e3e3e] dark:text-white/90 text-sm">{exp.company}</p>
             </div>
             <div className="flex flex-col lg:flex-row lg:items-center gap-1 lg:gap-2 text-xs lg:text-sm">
@@ -59,4 +67,4 @@ const jobSpace = ({ experience }: { experience: Job[] }) => {
   );
 };
 
-export default jobSpace;
+export default JobSpace;

@@ -33,7 +33,7 @@ export default function ProfileCard({ content }: { content: ContentProfile }) {
             <img
               width={270}
               height={270}
-              src="/notion-face.png"
+              src="/Profile1.jpg"
               alt="Profile"
               className="aspect-square rounded-2xl w-40 h-40 object-cover [@media(max-height:700px)]:w-32 [@media(max-height:700px)]:h-32 [@media(max-height:600px)]:w-24 [@media(max-height:600px)]:h-24"
             />

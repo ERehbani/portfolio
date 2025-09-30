@@ -9,6 +9,10 @@ export interface ContentExperience {
   export interface Job {
     title: string
     company: string
+    link: {
+        title: boolean
+        url: string
+    }
     location: string
     date: string
     description: string
@@ -23,6 +27,10 @@ export interface ContentExperience {
   export interface Project {
     title: string
     company: string
+    link: {
+        title: boolean
+        url: string
+    }
     location: string
     date: string
     description: string
