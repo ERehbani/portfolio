@@ -30,7 +30,7 @@ export default function Certifications({
 
   return (
     <div
-      className="glass-card text-[#3e3e3e] dark:text-white rounded-2xl p-3 2xl:p-8 flex items-center md:justify-center w-full ml-auto mx-auto relative h-full max-lg:w-full hover:shadow-md hover:shadow-[#3e3e3e] transition-shadow bg-black/20 backdrop-blur-sm  [@media(max-height:900px)]:p-3
+      className="glass-card overflow-hidden text-[#3e3e3e] dark:text-white rounded-2xl p-3 2xl:p-8 flex items-center md:justify-center w-full ml-auto mx-auto relative h-full max-lg:w-full hover:shadow-md hover:shadow-[#3e3e3e] transition-shadow bg-black/20 backdrop-blur-sm  [@media(max-height:900px)]:p-3
     [@media(max-height:800px)]:p-2 [@media(max-height:800px)]:md:p-6
     [@media(max-height:700px)]:p-2 [@media(max-height:700px)]:md:p-4
     [@media(max-height:600px)]:p-1.5 [@media(max-height:600px)]:md:p-3
@@ -83,9 +83,8 @@ export default function Certifications({
           {certificates.map((_, index) => (
             <div
               key={index}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                index === currentIndex ? "bg-gray-500" : "bg-gray-300"
-              }`}
+              className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex ? "bg-gray-500" : "bg-gray-300"
+                }`}
               aria-label={`Certificate ${index + 1}`}
             />
           ))}
