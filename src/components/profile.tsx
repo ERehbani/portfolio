@@ -134,7 +134,7 @@ export default function ProfileCard({ content }: { content: ContentProfile }) {
             />
           </a>
           <a
-            href="https://www.linkedin.com/in/elian-rehbani"
+            href="https://www.linkedin.com/in/elianrehbani"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#3e3e3e] p-2 rounded-md dark:bg-transparent [@media(max-height:600px)]:p-1.5"
