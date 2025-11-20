@@ -1,15 +1,16 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HomeIcon as HouseIcon, PanelsTopLeftIcon } from "lucide-react";
+import { HomeIcon as HouseIcon, PanelsTopLeftIcon, SquareArrowOutUpRight } from "lucide-react";
 import JobSpace from "./ui/jobSpace";
 import type { ContentExperience } from "@/lib/types";
+import AnimatedStarButton from "./ui/animatedStarButton";
 
 const Experience = ({ content }: { content: ContentExperience }) => {
   return (
     <div className="glass-card flex flex-col text-[#3e3e3e] dark:text-white h-96 lg:h-full rounded-2xl overflow-hidden hover:shadow-md hover:shadow-[#3e3e3e] transition-shadow">
       <Tabs defaultValue="tab-1" className="flex flex-col h-full">
         <div className="flex-shrink-0 p-5 lg:px-8 pb-0">
-          <TabsList className="w-fit bg-transparent justify-start">
+          <TabsList className="w-fit bg-transparent justify-start items-center">
             <TabsTrigger value="tab-1" className="flex items-center gap-1.5">
               <HouseIcon className="opacity-60" size={16} aria-hidden="true" />
               {content.title}
@@ -25,6 +26,7 @@ const Experience = ({ content }: { content: ContentExperience }) => {
               />
               {content.second_title}
             </TabsTrigger>
+           <AnimatedStarButton text={content.services_title.title} href={content.services_title.href}/>
           </TabsList>
         </div>
 

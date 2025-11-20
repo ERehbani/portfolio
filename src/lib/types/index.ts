@@ -2,6 +2,10 @@
 export interface ContentExperience {
     title: string
     second_title: string
+    services_title: {
+        title: string
+        href: string
+    }
     jobs: Job[]
     projects: Project[]
   }

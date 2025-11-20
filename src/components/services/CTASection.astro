@@ -1,0 +1,43 @@
+---
+import { ContactDialog } from "./contactDialog";
+
+const { content } = Astro.props;
+---
+
+<section class="border-t border-border bg-muted/30">
+  <div
+    class="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8 lg:py-24"
+  >
+    <h2
+      class="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+    >
+      {content.title}
+    </h2>
+    <p
+      class="mx-auto mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground"
+    >
+      {content.description}
+    </p>
+    <div
+      class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row"
+    >
+      <!-- <button
+        data-open-dialog
+        data-service="Consulta General"
+        class="min-w-[200px] rounded-md bg-primary px-8 py-3 text-base font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+      >
+        {content.cta1}
+      </button> -->
+      <ContactDialog client:only label={content.cta1} />
+    </div>
+    <p class="mt-6 text-sm text-muted-foreground">
+      {content.footer}
+      <a
+        href="mailto:elianrhbn@gmail.com"
+        class="underline hover:text-foreground"
+      >
+        elianrhbn@gmail.com
+      </a>
+    </p>
+  </div>
+</section>

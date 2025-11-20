@@ -1,0 +1,57 @@
+---
+import ProcessStep from "./ProcessStep.astro";
+
+const { content } = Astro.props;
+
+const process = [
+  {
+    step: content.steps.step1.num,
+    title: content.steps.step1.title,
+    description: content.steps.step1.description,
+  },
+  {
+    step: content.steps.step2.num,
+    title: content.steps.step2.title,
+    description: content.steps.step2.description,
+  },
+  {
+    step: content.steps.step3.num,
+    title: content.steps.step3.title,
+    description: content.steps.step3.description,
+  },
+  {
+    step: content.steps.step4.num,
+    title: content.steps.step4.title,
+    description: content.steps.step4.description,
+  },
+];
+---
+
+<section class="border-y border-border bg-muted/30">
+  <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <div class="text-center">
+      <h2
+        class="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+      >
+        {content.title}
+      </h2>
+      <p
+        class="mx-auto mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground"
+      >
+        {content.description}
+      </p>
+    </div>
+
+    <div class="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        process.map((item) => (
+          <ProcessStep
+            step={item.step}
+            title={item.title}
+            description={item.description}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
