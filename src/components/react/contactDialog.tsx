@@ -79,12 +79,6 @@ const ContactDialog = ({ label }: { label: string }) => {
 
       setIsSubmitted(true);
 
-      setTimeout(() => {
-        setIsOpen(false);
-        setIsSubmitted(false);
-        e.currentTarget.reset();
-      }, 3000);
-
     } catch (err) {
       console.error(err);
       alert("Hubo un error al enviar el mensaje.");
