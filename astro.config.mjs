@@ -1,14 +1,19 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import vercel from "@astrojs/vercel";
 import react from "@astrojs/react";
+import { fileURLToPath } from "node:url";
 
 export default defineConfig({
-  output: 'static',
-  adapter: vercel({
-    webAnalytics: { enabled: true },
-  }),
-  vite: { plugins: [tailwindcss()] },
+  output: "static",
+  adapter: vercel(),
+  vite: {
+    plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        "@": fileURLToPath(new URL("./src", import.meta.url))
+      }
+    }
+  },
   integrations: [react()],
 });
