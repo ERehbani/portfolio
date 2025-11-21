@@ -1,0 +1,6 @@
+# robots.txt para https://www.elianrehbani.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.elianrehbani.com/sitemap.xml

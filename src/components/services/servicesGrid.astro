@@ -1,44 +1,42 @@
 ---
-import ServiceCard from "./ServiceCard"
+import ServiceCard from "../react/ServiceCard";
 
-const {content} = Astro.props;
+const { content } = Astro.props;
 
 const services = [
   {
-    id: 'landing',
+    id: "landing",
     title: content.landingPage.title,
     description: content.landingPage.description,
     benefits: content.landingPage.benefits,
     ctaLabel: content.landingPage.cta,
   },
   {
-    id: 'ecommerce',
+    id: "ecommerce",
     title: content.ecommerce.title,
     description: content.ecommerce.description,
     benefits: content.ecommerce.benefits,
     ctaLabel: content.ecommerce.cta,
   },
   {
-    id: 'saas',
+    id: "saas",
     title: content.saas.title,
     description: content.saas.description,
     benefits: content.saas.benefits,
     ctaLabel: content.saas.cta,
   },
   {
-    id: 'improvement',
+    id: "improvement",
     title: content.upgradeMyProject.title,
     description: content.upgradeMyProject.description,
     benefits: content.upgradeMyProject.benefits,
     ctaLabel: content.upgradeMyProject.cta,
   },
-]
+];
 ---
 
 <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
   <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
-    {services.map((service) => (
-      <ServiceCard client:only service={service} />
-    ))}
+    {services.map((service) => <ServiceCard client:only service={service} />)}
   </div>
 </section>
