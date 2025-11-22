@@ -1,0 +1,173 @@
+---
+import About from "@/components/about.astro";
+import Certifications from "@/components/certifications";
+import Experience from "@/components/experience";
+import Profile from "@/components/profile";
+import Skills from "@/components/skills";
+import en from "@/i18n/en.json";
+import Image from "astro/components/Image.astro";
+
+import Footer from "@/components/footer.astro";
+import "@/styles/global.css"
+
+
+---
+
+<html lang="en">
+  <head>
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme") || "dark";
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/svg/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.css"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{en.head.title}</title>
+    <link rel="canonical" href="https://www.elianrehbani.com/" />
+
+    <!-- <link rel="alternate" hreflang="en" href="/en" />
+    <link rel="alternate" hreflang="es" href="/es" /> -->
+    <meta
+      name="description"
+      content={en.head.description}
+    />
+    <meta
+      name="keywords"
+      content={en.head.keywords}
+    />
+    <meta name="author" content="Elian Rehbani" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content={en.head.og.title}
+    />
+    <meta
+      property="og:description"
+      content={en.head.og.description}
+    />
+    <meta property="og:image" content="/og.png" />
+    <meta property="og:url" content="https://www.elianrehbani.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content={en.head.og.twitter.title}
+    />
+    <meta
+      name="twitter:description"
+      content={en.head.og.twitter.description}
+    />
+    <meta name="twitter:image" content="/og.png" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Datos estructurados JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Elian Rehbani",
+        "jobTitle": "Frontend Developer",
+        "image": "/og.png",
+        "url": "https://www.elianrehbani.com",
+        "sameAs": [
+          "https://www.linkedin.com/elianrehbani",
+          "https://github.com/elianrehbani"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance / Autónomo"
+        },
+        "description": "Elian Rehbani is a Frontend Developer from Mar del Plata, Argentina, specialized in React, Next.js, TailwindCSS and TypeScript. Creates custom and scalable web solutions for businesses and professionals, with integrated metrics and continuous support.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Mar del Plata",
+          "addressRegion": "Buenos Aires",
+          "addressCountry": "Argentina"
+        },
+        "email": "elianrhbn@gmail.com",
+        "knowsAbout": [
+          "Frontend",
+          "React",
+          "Next.js",
+          "TypeScript",
+          "TailwindCSS",
+          "Frontend Development",
+          "Web Sites",
+          "Page web",
+          "Página web",
+          "Web Development",
+          "Web Development for Businesses",
+          "Web Development for Professionals",
+          "Web Development for Companies",
+          "Web Development for Clients",
+          "Web Sites for Businesses",
+          "Web Maintenance"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="relative h-screen transition-all">
+      <div class="absolute inset-0">
+        <Image
+          src="/svg/ooorganize.svg"
+          alt="Background"
+          width={100}
+          height={100}
+          class="w-full h-full object-cover repeat-infinite pointer-events-none"
+        />
+        <div
+          class="h-[100vh] fixed w-full dark:bg-black bg-[#EDEEEB] [&>div]:absolute [&>div]:bottom-0 [&>div]:left-[-20%] [&>div]:right-0 [&>div]:top-[-10%] [&>div]:h-[1800px] overflow-hidden [&>div]:w-[2400px] [&>div]:rounded-full [&>div]:bg-[radial-gradient(circle_farthest-side,rgba(210,210,210,1),rgba(0,0,0,0))] dark:[&>div]:bg-[radial-gradient(circle_farthest-side,rgba(210,210,210,.15),rgba(0,0,0,0))]"
+        >
+          <div></div>
+        </div>
+        <div
+          class="absolute top-1/2 w-[90%] lg:w-[70%] h-[90%] left-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <div
+            class="flex flex-col pb-10 gap-2 h-fit lg:grid lg:grid-cols-8 lg:grid-rows-6 lg:gap-2 w-full lg:h-full"
+          >
+            <div
+              class="lg:col-start-1 lg:col-end-3 row-start-1 row-end-7 h-full"
+            >
+              <Profile client:idle content={en.profile} />
+            </div>
+            <div
+              class="lg:col-start-3 lg:col-end-7 row-start-1 row-end-3 h-full"
+            >
+              <About content={en.about}/>
+            </div>
+            <div
+              class="lg:col-start-7 lg:col-end-9 row-start-1 row-end-3 h-full"
+            >
+              <Certifications client:idle content={en.certifications}/>
+            </div>
+            <div
+              class="lg:col-start-3 lg:col-end-9 row-start-3 row-end-6 h-full"
+            >
+              <Experience client:idle content={en.experience}/>
+            </div>
+            <div
+              class="lg:col-start-3 lg:col-end-9 row-start-6 row-end-7 h-full"
+            >
+              <Skills client:idle />
+            </div>
+          </div>
+         <Footer content={en.footer}/>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
