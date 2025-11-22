@@ -22,10 +22,10 @@
 @custom-variant dark (&:is(.dark *));
 
 .glass-card {
-background: rgba(255, 255, 255, 0.03);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(10px);
-border: 1px solid #393939;
+  background: rgba(255, 255, 255, 0.01) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #393939;
 }
 
 @theme inline {
