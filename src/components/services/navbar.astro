@@ -4,41 +4,62 @@ import { ArrowLeft } from "lucide-react";
 const { content } = Astro.props;
 ---
 
-<div
-  class="fixed top-0 z-50 flex gap-5 justify-between items-center w-full py-6 rounded-b-2xl px-6 max-w-4xl mx-auto bg-white/5 backdrop-blur-md border border-[#393939] border-t-0"
->
-  <div class="flex gap-5 items-center">
-    <a href={content.href} class="bg-[#3e3e3e] rounded-md p-2 w-fit aspect-square object-cover [@media(max-height:700px)]:p-1.5 [@media(max-height:600px)]:p-1">
-      <ArrowLeft className="text-white "/>
-    </a>
-    <a
-      href={content.href}
-      class="bg-[#3e3e3e] rounded-md p-1 w-fit aspect-square object-cover [@media(max-height:700px)]:p-1.5 [@media(max-height:600px)]:p-1"
-    >
-      <img
-        width={90}
-        height={90}
-        src="/Profile1.jpg"
-        alt="Profile"
-        class="aspect-square rounded-md w-14 h-14 object-cover [@media(max-height:700px)]:w-20 [@media(max-height:700px)]:h-20 [@media(max-height:600px)]:w-16 [@media(max-height:600px)]:h-16"
-      />
-    </a>
-    <p>{content.title}</p>
-  </div>
-  <div class="w-fit flex justify-center">
-    <a
-      href="https://www.linkedin.com/in/elianrehbani"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="bg-[#3e3e3e] p-2 rounded-md dark:bg-transparent [@media(max-height:600px)]:p-1.5"
-    >
-      <img
-        src="/svg/linkedin.svg"
-        alt="Elian Rehbani LinkedIn"
-        class="w-8 h-8 aspect-square object-cover hover:opacity-80 transition-opacity [@media(max-height:600px)]:w-6 [@media(max-height:600px)]:h-6"
-        width={100}
-        height={100}
-      />
-    </a>
+<div class="fixed top-0 z-50 w-full max-w-4xl">
+  <div
+    class="flex items-center justify-between gap-3 sm:gap-5 w-full py-3 sm:py-4 md:py-6 px-3 sm:px-4 md:px-6 max-w-4xl mx-auto bg-white/5 backdrop-blur-md border border-[#393939] border-t-0 rounded-b-xl sm:rounded-b-2xl"
+  >
+    {/* Left section - Back button, profile and title */}
+    <div class="flex items-center gap-2 sm:gap-3 md:gap-5 min-w-0 flex-1">
+      {/* Back button */}
+      <a
+        href={content.href}
+        class="bg-[#3e3e3e] rounded-md p-1.5 sm:p-2 shrink-0 hover:bg-[#4e4e4e] transition-colors"
+        aria-label="Go back"
+      >
+        <ArrowLeft className="text-white w-4 h-4 sm:w-5 sm:h-5" />
+      </a>
+
+      {/* Profile and title container */}
+      <div class="flex items-center gap-2 sm:gap-3 md:gap-5 min-w-0 flex-1">
+        {/* Profile image */}
+        <a
+          href={content.href}
+          class="bg-[#3e3e3e] rounded-md p-1 shrink-0 hover:bg-[#4e4e4e] transition-colors"
+          aria-label="Profile"
+        >
+          <img
+            width={90}
+            height={90}
+            src="/Profile1.jpg"
+            alt="Profile"
+            class="aspect-square rounded-md w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 object-cover"
+          />
+        </a>
+
+        {/* Title - truncate on small screens */}
+        <p class="text-xs sm:text-sm md:text-base truncate min-w-0">
+          {content.title}
+        </p>
+      </div>
+    </div>
+
+    {/* Right section - LinkedIn button */}
+    <div class="shrink-0">
+      <a
+        href="https://www.linkedin.com/in/elianrehbani"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-[#3e3e3e] p-1.5 sm:p-2 rounded-md flex items-center justify-center hover:bg-[#4e4e4e] transition-colors"
+        aria-label="LinkedIn Profile"
+      >
+        <img
+          src="/svg/linkedin.svg"
+          alt="LinkedIn"
+          class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 aspect-square object-cover hover:opacity-80 transition-opacity"
+          width={100}
+          height={100}
+        />
+      </a>
+    </div>
   </div>
 </div>

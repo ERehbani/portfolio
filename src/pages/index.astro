@@ -9,6 +9,7 @@ import es from "@/i18n/es.json";
 
 import "../styles/global.css";
 import Footer from "@/components/footer.astro";
+import AnimatedStarButton from "@/components/ui/animatedStarButton";
 
 
 const structuredData = {
@@ -157,6 +158,9 @@ const structuredData = {
               class="lg:col-start-7 lg:col-end-9 row-start-1 row-end-3 h-full"
             >
               <Certifications client:idle content={es.certifications} />
+            </div>
+            <div class="lg:col-start-7 lg:col-end-20 row-start-1 row-end-6 w-full h-full flex justify-center sm:hidden max-sm:border max-sm:border-[#393939] max-sm:rounded-lg max-sm:glass-card max-sm:py-4">
+              <AnimatedStarButton text={es.experience.services_title.title} href={es.experience.services_title.href}/>
             </div>
             <div
               class="lg:col-start-3 lg:col-end-9 row-start-3 row-end-6 h-full"
