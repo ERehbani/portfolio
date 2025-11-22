@@ -8,6 +8,7 @@ export default defineConfig({
   output: 'server',
   adapter: vercel({
     webAnalytics: { enabled: true },
+    bundleNodeModules: true,  // Añadir esto
   }),
   vite: { plugins: [tailwindcss()] },
   integrations: [react()],
