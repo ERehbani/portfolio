@@ -9,7 +9,6 @@ export const onRequest: MiddlewareHandler = async ({ request, redirect }, next) 
     // Tomamos el primer idioma antes de coma
     const firstLang = header.split(",")[0].trim().toLowerCase();
 console.log(firstLang)
-    // Verifica español incluso variantes: es, es-ar, es-419, es-us, etc
     const isSpanish = firstLang.startsWith("es");
 
     if (!isSpanish) {
